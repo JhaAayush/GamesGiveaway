@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Giveaways</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <h1>Game Giveaways</h1>
+    <ul>
+        {% for giveaway in giveaways %}
+        <li>
+            <h2>{{ giveaway.title }}</h2>
+            <p>Description: {{ giveaway.description }}</p>
+            <br>
+            <b>
+                <p>Platform: {{ giveaway.platforms }}</p>
+            </b>
+            <br>
+            <p>End Date: {{ giveaway.end_date }}</p>
+            <br>
+            <img src="{{ giveaway.thumbnail }}" alt="{{ giveaway.title }} Thumbnail">
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+
+</html>
