@@ -15,7 +15,9 @@
     <ul>
         {% for giveaway in giveaways %}
         <li>
-            <h2>{{ giveaway.title }}</h2>
+            <a href="{{giveaway.open_giveaway}}">
+                <h2>{{ giveaway.title }}</h2>
+            </a>
             <p>Description: {{ giveaway.description }}</p>
             <br>
             <b>
